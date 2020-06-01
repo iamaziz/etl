@@ -14,8 +14,10 @@ class Pipeline(object):
             table1: https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2017/cbsa-est2017-alldata.pdf
             table2: https://www.ers.usda.gov/data-products/county-level-data-sets/download-data
         """
-        url_popul_est = 'https://www2.census.gov/programs-surveys/popest/datasets/2010-2017/metro/totals/cbsa-est2017-alldata.csv'
-        url_unemployment = 'https://www.ers.usda.gov/webdocs/DataFiles/48747/Unemployment.xls'
+        #url_popul_est = 'https://www2.census.gov/programs-surveys/popest/datasets/2010-2017/metro/totals/cbsa-est2017-alldata.csv'
+        url_popul_est = 'data/cbsa-est2017-alldata.csv'
+        #url_unemployment = 'https://www.ers.usda.gov/webdocs/DataFiles/48747/Unemployment.xls'
+        url_unemployment = 'data/Unemployment.xls'
 
         self.population = pd.read_csv(url_popul_est, encoding='ISO-8859-1')
         self.unemployment = pd.read_excel(url_unemployment, skiprows=7)
